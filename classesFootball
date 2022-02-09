@@ -1,0 +1,292 @@
+#include <iostream>
+
+using namespace std;
+#include <string>
+
+
+//Base class player
+class player{
+  public:
+    string name;
+    int playerId;
+
+    player(string n = " ", int i = 0);
+
+    string getName(){
+      return name;
+    }
+
+    int getPlayerId(){
+      return playerId;
+    }
+
+    virtual string getPlayerPosition(){
+      //return the players position
+      return " ";
+    }
+    
+    virtual string play(){
+      //returns throw, kick, block, etc.
+      return " ";
+    }
+
+    virtual void toString(){
+      //return a string of player name, id, position, and how they play
+    }
+};
+
+
+
+//derived quarterback class
+class quarterBack: public player{
+  public:
+    string name;
+    int playerId;
+    quarterBack(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "Quarter Back";
+    }
+
+    string play(){
+      return "throws";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+    
+
+};
+
+//derived wide reciever class
+class wideReciever: public player{
+  public:
+    string name;
+    int playerId;
+    wideReciever(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "Wide Reciever";
+    }
+
+    string play(){
+      return "catches";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+};
+
+//derived tight end class
+class tightEnd: public player{
+  public:
+    string name;
+    int playerId;
+    tightEnd(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "tight end";
+    }
+
+    string play(){
+      return "blocks";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+};
+
+//derived running back class
+class runningBack: public player{
+  public:
+    string name;
+    int playerId;
+    runningBack(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "Running Back";
+    }
+
+    string play(){
+      return "blocks";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+};
+
+//derived offensive lineman class
+class offensiveLineman: public player{
+  public:
+    string name;
+    int playerId;
+    offensiveLineman(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "Offensive Lineman";
+    }
+
+    string play(){
+      return "blocks";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+};
+
+//derived defensive lineman class
+class defensiveLineman: public player{
+  public:
+    string name;
+    int playerId;
+    defensiveLineman(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "Defensive Lineman";
+    }
+
+    string play(){
+      return "throws";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+};
+
+//derived linebacker class
+class linebacker: public player{
+  public:
+    string name;
+    int playerId;
+    linebacker(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "linebacker";
+    }
+
+    string play(){
+      return "blocks";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+};
+
+//derived defensive back class
+class defensiveBack:public player{
+  public:
+    string name;
+    int playerId;
+    defensiveBack(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "Defensive Back";
+    }
+
+    string play(){
+      return "kicks";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+};
+
+//derived kicker class
+class kicker: public player{
+  public:
+    string name;
+    int playerId;
+    kicker(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "Kicker";
+    }
+
+    string play(){
+      return "kicks";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+};
+
+//derived holder class
+class holder: public player{
+  public:
+    string name;
+    int playerId;
+    holder(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "holder";
+    }
+
+    string play(){
+      return "blocks";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+};
+
+//derived punter class
+class punter: public player{
+  public:
+    string name;
+    int playerId;
+    punter(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "punter";
+    }
+
+    string play(){
+      return "throws";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+};
+
+//derived Returner class
+class returner: public player{
+  public:
+    string name;
+    int playerId;
+    returner(string n = " ", int i = 0);
+
+    string getPlayerPosition(){
+      return "returner";
+    }
+
+    string play(){
+      return "throws";
+    }
+
+    void toString(){
+      cout<<name<<" is a "<<getPlayerPosition()<<" who "<<play()<<" for the team. His player ID is "<<playerId<<"."<<endl;
+    }
+
+};
+
