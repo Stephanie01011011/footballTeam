@@ -1,0 +1,208 @@
+#include <iostream>
+#include "classes.cpp"
+
+using namespace std;
+#include <vector>
+#include <string>
+
+//parameterized constructors
+player::player(string n, int i){
+  name = n;
+  playerId = i;
+}
+
+quarterBack::quarterBack(string n, int i){
+  name = n;
+  playerId = i;
+}
+wideReciever::wideReciever(string n, int i){
+  name = n;
+  playerId = i;
+}
+tightEnd::tightEnd(string n, int i){
+  name = n;
+  playerId = i;
+}
+runningBack::runningBack(string n, int i){
+  name = n;
+  playerId = i;
+}
+offensiveLineman::offensiveLineman(string n, int i){
+  name = n;
+  playerId = i;
+}
+defensiveLineman::defensiveLineman(string n, int i){
+  name = n;
+  playerId = i;
+}
+linebacker::linebacker(string n, int i){
+  name = n;
+  playerId = i;
+}
+defensiveBack::defensiveBack(string n, int i){
+  name = n;
+  playerId = i;
+}
+kicker::kicker(string n, int i){
+  name = n;
+  playerId = i;
+}
+holder::holder(string n, int i){
+  name = n;
+  playerId = i;
+}
+punter::punter(string n, int i){
+  name = n;
+  playerId = i;
+}
+returner::returner(string n, int i){
+  name = n;
+  playerId = i;
+}
+
+int main() {
+//class objects
+  quarterBack qb;
+  wideReciever wr;
+  tightEnd te;
+  runningBack rb;
+  offensiveLineman ol;
+  defensiveLineman dl;
+  linebacker lb;
+  defensiveBack db;
+  kicker k1;
+  holder h1;
+  punter p1;
+  returner r1;
+
+  //variables
+  int choice;
+  int playersamt;
+  int playerId;
+  int amount;
+
+  //Display menu
+  vector <string> Names = {"Kylo Ren", "Charlie Barber", "Loki", "Luke Skywalker", "Ben Solo", "Adam Driver", "Casteel", "Eric", "Riley", "Rhysand", "Tom Hiddleston", "Sam"};
+    cout<<"1. Quarterback"<<endl;
+    cout<<"2. Wide Reciever"<<endl;
+    cout<<"3. Tight End"<<endl;
+    cout<<"4. Running Back"<<endl;
+    cout<<"5. Offensive Lineman"<<endl;
+    cout<<"6. Defensive Lineman"<<endl;
+    cout<<"7. Linebacker"<<endl;
+    cout<<"8. Defensive Back"<<endl;
+    cout<<"9. Kicker"<<endl;
+    cout<<"10. Holder"<<endl;
+    cout<<"11. Punter"<<endl;
+    cout<<"12. Returner"<<endl;
+  
+  //asks what position each player is
+  for(int i = 0; i < 12; i++){
+    cout<<"Which category do you need to add player #"<<i+1<<" to? (Enter number of your choice): "<<endl;
+    
+    cin>>choice;
+
+//switch cases will add each name and player id to its respective class
+    switch(choice){
+    case 1:
+    qb.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    qb.playerId = playerId;
+    break;
+    case 2:
+    wr.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    wr.playerId = playerId;
+    break;
+    case 3:
+    te.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    te.playerId = playerId;
+    break;
+    case 4:
+    rb.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    rb.playerId = playerId;
+    break;
+    case 5:
+    ol.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    ol.playerId = playerId;
+    break;
+    case 6:
+    dl.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    dl.playerId = playerId;
+    break;
+    case 7:
+    lb.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    lb.playerId = playerId;
+    break;
+    case 8:
+    db.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    db.playerId = playerId;
+    break;
+    case 9:
+    k1.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    k1.playerId = playerId;
+    break;
+    case 10:
+    h1.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    h1.playerId = playerId;
+    break;
+    case 11:
+    p1.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    p1.playerId = playerId;
+    break;
+    case 12:
+    r1.name = Names[i];
+    cout<<"what is this players ID number: "<<endl;
+    cin>>playerId;
+    r1.playerId = playerId;
+    break;
+
+    
+  }
+ //display amount of team members 
+int playersamt = i+1;
+cout<<"The amount of players on this team are: "<<playersamt<<endl;
+  }
+  
+//Display all team members
+qb.toString();
+wr.toString();
+te.toString();
+rb.toString();
+ol.toString();
+dl.toString();
+lb.toString();
+db.toString();
+k1.toString();
+h1.toString();
+p1.toString();
+r1.toString(); 
+
+
+
+
+
+  
+
+  
+}
